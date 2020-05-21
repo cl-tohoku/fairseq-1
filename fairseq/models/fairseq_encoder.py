@@ -52,7 +52,7 @@ class FairseqEncoder(nn.Module):
         else:
             return self.forward_non_torchscript(net_input)
 
-    @torch.jit.unused
+    #@torch.jit.unused
     def forward_non_torchscript(self, net_input: Dict[str, Tensor]):
         encoder_input = {
             k: v
